@@ -1,0 +1,9 @@
+<div class="list">
+  <app-movie
+    *ngFor="let movie of (movies$ | async); trackBy: trackByFn"
+    [name]="movie.name"
+    [isOnline]="movie.isOnline"
+    (delete)="deleteMovie(movie.id)"
+    (toggleOnlineStatus)="toggleStatus(movie)"
+  ></app-movie>
+</div>

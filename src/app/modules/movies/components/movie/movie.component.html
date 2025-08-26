@@ -1,0 +1,14 @@
+<app-card>
+  <div card-header>{{ name }}</div>
+  <div card-body>Онлайн: <input
+      type="checkbox"
+      [(ngModel)]="isOnline"
+      (ngModelChange)="handleToggleOnlineStatus()"
+    ></div>
+  <div card-actions>
+    <button
+      styledButton
+      (click)="handleDelete()"
+    >Удалить</button>
+  </div>
+</app-card>

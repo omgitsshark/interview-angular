@@ -1,0 +1,25 @@
+@import '../../../../../assets/styles/variables';
+
+.add-movie {
+    &__title {
+        font-size: 16px;
+        margin-bottom: 4px;
+    }
+
+    &__form {
+        display: flex;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+
+    &__field {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    &__error {
+        color: $error;
+    }
+}

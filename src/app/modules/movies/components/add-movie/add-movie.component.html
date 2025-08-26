@@ -1,0 +1,27 @@
+<div class="add-movie">
+  <p class="add-movie__title">Добавить фильм</p>
+
+  <form
+    class="add-movie__form"
+    (submit)="addMovie()"
+    [formGroup]="form"
+  >
+    <div class="add-movie__field">
+      <input
+        styledInput
+        formControlName="name"
+        placeholder="Название фильма"
+      />
+      <span
+        *ngIf="form.invalid && form.touched"
+        class="add-movie__error"
+      >Обязательное поле</span>
+    </div>
+
+
+    <button
+      styledButton
+      type="submit"
+    >Добавить фильм</button>
+  </form>
+</div>
